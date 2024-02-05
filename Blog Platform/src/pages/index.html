@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Platform</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <p>Hi, {{user.name}}!</p>
+    <h1>Blog Platform</h1>
+    <a href="/all-posts">All Posts</a>
+    <a href="/my-posts">My Posts</a>
+    <a href="/logout">Logout</a>
+
+    <h2>{{pageTitle}}</h2>
+    {{#each posts}}
+        <div>
+            <!-- Insert post creation here -->
+
+            <h3>{{this.dataValues.title}}</h3>
+            <p>{{this.dataValues.content}}</p>
+            
+            <hr>
+            <p>Date: {{this.dataValues.date}}</p>
+            <p>Posted by: {{this.User.dataValues.name}}</p>
+            
+            {{#if this.Comments.length}}
+                <h4>Comments:</h4>
+                {{#each this.Comments}}
+                    <div>
+                        <p>{{this.dataValues.content}} by {{this.User.dataValues.name}}</p>
+                    </div>
+                {{/each}}
+            {{else}}
+                <p>No comments yet.</p>
+            {{/if}}
+
+            <!-- Insert comment creation here -->
+            <form action="/api/comment" method="post">
+                <label for="commentContent">Your Comment:</label><br>
+                <textarea id="content" name="content" cols="40" required></textarea>
+                <input type="hidden" id="UserId" name="UserId" value={{../user.id}}>
+                <input type="hidden" id="PostId" name="PostId" value="{{this.dataValues.id}}">
+                <input type="submit" value="Post">
+            </form>
+        </div>
+    {{/each}}
+
+</body>
+</html>
+
