@@ -12,7 +12,7 @@ Each project is designed to showcase different aspects of web development using 
 
 2. **Blog Platform**
    - Description: A blog platform allowing users to create, edit, and delete blog posts.
-   - Technologies: Node.js, Express, SQLite, Passport.js (for authentication), HTML, CSS, JavaScript.
+   - Technologies: Node.js, Express, SQLite, HTML, CSS, JavaScript.
 
 3. **Real-time Chat Application**
    - Description: A real-time chat application using WebSocket or Socket.io for communication.
@@ -20,11 +20,11 @@ Each project is designed to showcase different aspects of web development using 
 
 4. **Weather App**
    - Description: A weather application fetching and displaying current weather conditions using a weather API.
-   - Technologies: Node.js, Express, HTML, CSS, JavaScript, Weather API (e.g., OpenWeatherMap).
+   - Technologies: Node.js, Express, HTML, CSS, JavaScript, Weather API (OpenWeatherMap).
 
 5. **E-commerce Platform**
    - Description: A basic e-commerce platform with product browsing, cart management, and payment integration.
-   - Technologies: Node.js, Express, SQLite, HTML, CSS, JavaScript, Payment Gateway API (e.g., Stripe).
+   - Technologies: Node.js, Express, MongoDB, HTML, CSS, JavaScript.
 
 
 ## Getting Started
